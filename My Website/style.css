@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+  background-color: #FFDAB9; /* Light orange */
+  margin: 0;
+  font-family: Agency FB;
+  color: black;  /* default text color */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #004080;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #002f5f;
+  border-radius: 5px;
+}
+
+/* Boxes (sections) */
+.box {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  color: black;  /* default text black inside boxes */
+}
+
+/* Section colors and text colors */
+.title-box {
+  background-color: #007ACC;
+  color: white; /* light text for contrast */
+}
+
+.certifications-box {
+  background-color: #FF7F50;
+  color: black;
+}
+
+.about-box {
+  background-color: #6A5ACD;
+  color: white;
+}
+
+.reviews-box {
+  background-color: #20B2AA;
+  color: black;
+}
+
+.contact-box {
+  background-color: #FF8C00;
+  color: black;
+}
+
+.projects-box {
+  background-color: white;
+  color: black;
+}
+
+.skills-box {
+  background-color: #6A5ACD;
+  color: white;
+}
+
+/* Contact button */
+.contact-button {
+  display: inline-block;
+  background-color: #004080;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #002f5f;
+  cursor: pointer;
+}
+
+/* Headings */
+.box h1, .box h2 {
+  margin-top: 0;
+}
+
+/* Responsive navbar */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .box {
+    margin: 10px 0;
+  }
+}

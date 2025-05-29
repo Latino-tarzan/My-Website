@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pablo Posada Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Modal CSS inside for easy testing - you can keep it in your style.css instead */
+    .modal {
+      display: none; /* hidden initially */
+      position: fixed;
+      z-index: 200;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .close-button {
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Modal -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Welcome!</h2>
+      <p>Thank you for visiting my portfolio!</p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
+
+  <!-- Title Section -->
+  <div id="home" class="box title-box">
+    <h1>Pablo Posada</h1>
+    <p>Amateur programmer and video game developer</p>
+  </div>
+
+  <!-- Certifications -->
+  <div id="certifications" class="box certifications-box">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Web Development Bootcamp - 2025</li>
+      <li>JavaScript Algorithms and Data Structures - 2024</li>
+      <li>Responsive Web Design Certification - 2023</li>
+      <li>Google Cybersecurity Certificate</li>
+      <li>Google Data Analytics Certificate</li>
+    </ul>
+  </div>
+
+  <!-- About -->
+  <div id="about" class="box about-box">
+    <h2>About Me</h2>
+    <p>
+      I am a 20 year old developer who loves gaming and building random things.  
+      You'll find what I am up to here with projects, coding, and mods for games.  
+      I hope you enjoy your stay and carry on.
+    </p>
+  </div>
+
+  <!-- Reviews -->
+  <div id="reviews" class="box reviews-box">
+    <h2>Reviews</h2>
+    <ul>
+      <li>4 out of 5</li>
+      <li>Amazing service</li>
+      <li>Quick to respond</li>
+      <li>Palabra</li>
+    </ul>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="box contact-box">
+    <h2>Contact | Collaborate | Leave a Review</h2>
+    <p>
+      <a href="mailto:pablo@example.com" class="contact-button">Contact Me</a>
+    </p>
+  </div>
+
+  <!-- Projects -->
+  <div id="projects" class="box projects-box">
+    <h2>Projects I'm Working On</h2>
+    <ul>
+      <li>Currently working on a Minecraft mod as a summer challenge</li>
+      <li>Building a PC by hand</li>
+      <li>Creating an AI</li>
+    </ul>
+  </div>
+
+  <!-- Skills -->
+  <div id="skills" class="box skills-box">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Cybersecurity Fundamentals</li>
+      <li>Data Analysis with Excel & SQL</li>
+      <li>Modding for Games (e.g., Minecraft)</li>
+      <li>Basic PC Building & Hardware</li>
+    </ul>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const modal = document.getElementById("welcomeModal");
+      const closeBtn = document.querySelector(".close-button");
+
+      // Show the modal after 3 seconds (3000ms)
+      setTimeout(() => {
+        modal.style.display = "block";
+      }, 3000);
+
+      // Close modal when 'x' is clicked
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close modal when clicking outside the modal content
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    };
+  </script>
+</body>
+</html>
